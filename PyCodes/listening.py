@@ -1,8 +1,11 @@
+import re
 import speech_recognition as sr
 import pyttsx3
 
 recognizer = sr.Recognizer()
 engine=pyttsx3.init()
+
+name_pattern=re.compile(r'(?:my name is|i am|I\'m)\s+(\w+)|(.*?)(\sis\smy\sname)')
 
 
 def capture_voice_input():
@@ -24,7 +27,12 @@ def convert_voice_to_text(audio):
         print("Error; {0}".format(e))
     return text
 def process_voice_command(text):
-    if "hello" in text.lower():
+    match=name_pattern.search(text.lower())
+    if match:
+        real_name=match.group(1) or match.group(2)
+        print("Your name is "+ real_name)
+        engine.say("Hello! "+real_name )
+    elif "hello" in text.lower():
         engine.say("Hello! How can I help you?")
         engine.runAndWait()
     elif "goodbye" in text.lower():
