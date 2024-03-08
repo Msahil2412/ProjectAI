@@ -7,11 +7,10 @@ engine=pyttsx3.init()
 
 def capture_voice_input():
     with sr.Microphone() as source:
-        engine=pyttsx3.init()
         engine.say("Listening")
         engine.runAndWait()
         audio = recognizer.listen(source)
-    return audio 
+    return audio
 def convert_voice_to_text(audio):
     try:
         text = recognizer.recognize_google(audio)
