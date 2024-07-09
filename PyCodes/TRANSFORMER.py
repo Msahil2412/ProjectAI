@@ -8,3 +8,6 @@ import transformers
 from transformers import AutoModel, BertTokenizerFast
 
 device = torch.device("cuda")
+
+df = pd.read_csv("../input/spamdatatest/spamdata_v2.csv")
+df.head()
