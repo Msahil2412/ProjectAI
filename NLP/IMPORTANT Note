@@ -15,3 +15,20 @@ Context words give you information about writing style.
 You can observe patterns in how authors use context words in order to quantify their writing style. 
 Once you’ve quantified their writing style,
  you can analyze a text written by an unknown author to see how closely it follows a particular writing style so you can try to identify who the author is.
+
+ nltk.help.upenn_tagset()
+uss this to get all the TPOS Values and their meanings
+
+
+Lemmatizing
+Now that you’re up to speed on parts of speech, you can circle back to lemmatizing. Like stemming, 
+lemmatizing reduces words to their core meaning, but it will give you a complete English word that makes sense on its own instead of just a fragment of a word like 'discoveri'.
+
+Note: A lemma is a word that represents a whole group of words, and that group of words is called a lexeme.
+
+For example, if you were to look up the word “blending” in a dictionary, then you’d need to look at the entry for “blend,” but you would find “blending” listed in that entry.
+
+In this example, “blend” is the lemma, and “blending” is part of the lexeme. So when you lemmatize a word, you are reducing it to its lemma.
+
+The Lemetizer does not lemmatize the noun, if the word is comletely different from its lemma or it is not acting as an adjective then you have to tag it as an ADJECTIVE.
+The Lemetizer only works with the sentences which are grammatically correct.
