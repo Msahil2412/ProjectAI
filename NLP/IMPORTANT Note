@@ -1,0 +1,17 @@
+use 
+
+nltk.download('punkt')
+PunktSentenceTokenizer is a data-driven tokenizer that uses an unsupervised algorithm to divide text into sentences
+
+
+nltk.download('stopwords')
+Stop words are words that you want to ignore, 
+so you filter them out of your text when you’re processing it. 
+Very common words like 'in', 'is', and 'an' are often used as stop words since they don’t add a lot of meaning to a text in and of themselves.
+
+Content words give you information about the topics covered in the text or the sentiment that the author has about those topics.
+
+Context words give you information about writing style. 
+You can observe patterns in how authors use context words in order to quantify their writing style. 
+Once you’ve quantified their writing style,
+ you can analyze a text written by an unknown author to see how closely it follows a particular writing style so you can try to identify who the author is.
